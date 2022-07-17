@@ -1,0 +1,47 @@
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+ul,ol{
+	list-style:none;
+}
+.box{
+	float: left;
+	width:25%;
+	text-align: center;
+	height:700px;
+	margin:15px auto 0px auto;
+	border: 1px solid;
+	border-radius: 20px;
+	box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+	background-color:#fff;
+}
+.image{
+	width:280px;
+	height:330px;
+	border-radius:18%;
+	box-shadow: 5px 15px 30px rgba(173,216,230,0.8);
+	margin-top: 5px;
+}
+.genre{
+	display: inline-block;
+	margin-right:15px;
+	font-weight: border;
+	font-size: 20px;
+	padding-left: 8px;
+	
+}
+.summary{
+	margin-top:5px;
+	font-size: 15px;
+	padding-left: 8px;
+	
+}
+
+.Link{
+	font-family: fantasy;
+	text-decoration:none;
+	padding-left: 8px;
+	color: black;
+}

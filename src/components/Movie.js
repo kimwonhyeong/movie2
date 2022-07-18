@@ -22,7 +22,6 @@ function Movie({mediumCoverImage, title, genres, summary, id}){
 			<Link to={`/movie/${id}`}><img src={mediumCoverImage} alt={title} className={styles.image}/></Link>
 			{smallImg ? <img src={mediumCoverImage} alt={title} className={styles.image}/> : <img src={mediumCoverImage} alt={title} className={styles.imageBig}/>}
 			<Link to={`/movie/${id}`} className={styles.Link}>{title}</Link>
-			{hide ? <p onMouseOver={onGenres} className={styles.genre}>장르</p> : <div>{genres.map((genre,index)=>(<span key={index} onMouseOut={offGenres} className={styles.genre}>[{genre}]</span>))}</div>}
 			<p className={styles.summary}>{summary}</p>	
 		</div>
 		

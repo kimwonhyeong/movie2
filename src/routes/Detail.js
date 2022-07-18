@@ -27,7 +27,10 @@ function Detail(){
 					<img src={movie.large_cover_image} alt={movie.title} className={styles.image}/>
 					<div className={styles.box3}>
 						<span><a href={`${movie.url}`} className={styles.Link}>{`영화 보기`}</a></span><br/>
-				 	</div>
+					</div>
+					<div className={styles.box3}>
+						<span><Link to={`/`} className={styles.Link}>{`이전 화면`}</Link></span>
+					</div>
 				</div>
 			}
 		</div>

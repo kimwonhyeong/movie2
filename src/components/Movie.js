@@ -22,7 +22,7 @@ function Movie({mediumCoverImage, title, genres, summary, id}){
 			<Link to={`/movie/${id}`}><img src={mediumCoverImage} alt={title} className={styles.image}/></Link>
 			{smallImg ? <img src={mediumCoverImage} alt={title} className={styles.image}/> : <img src={mediumCoverImage} alt={title} className={styles.imageBig}/>}
 			<Link to={`/movie/${id}`} className={styles.Link}>{title}</Link>
-			<p className={styles.summary}>{summary}</p>	
+			<p className={styles.summary}>{summary}</p>
 		</div>
 		
 	)

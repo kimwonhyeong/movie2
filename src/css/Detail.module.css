@@ -16,15 +16,23 @@ ul,ol{
 	border: 1px solid;
 	border-color:white;
 	box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
-	background-color:#fff;
+	background-color:black;
 }
 .box3{
 	float:left;
+	border: 1px solid;
+	border-color:white;
+	box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+	background-color: tomato;
+	width:200px;
+	height:100px;
+	margin-top: 300px;
+	margin-left:500px;
+	text-align:center;
+	font-size:35px;
 }
 .image{
 	float:left;
-	width:600px;
-	height:900px;
 	border-radius:18%;
 	box-shadow: 5px 15px 30px rgba(173,216,230,0.8);
 	margin-top: 5px;

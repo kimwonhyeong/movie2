@@ -4,21 +4,26 @@ import styles from "../css/Movie.module.css";
 import {useState} from "react";
 function Movie({mediumCoverImage, title, genres, summary, id}){
 	const [hide, setHide] = useState(true);
-	const onSummary = ()=>{
+	const [smallImg, setSmallImg] = useState(true);
+	const onGenres = ()=>{
 		setHide(false);
 	}
-	const offSummary = ()=>{
+	const offGenres = ()=>{
 		setHide(true);
 	}
+	const onBox = ()=>{
+		setSmallImg(false);
+	} 
+	const outBox = ()=>{
+		setSmallImg(true);
+	}
 	return(
-		<div className={styles.box}>
-			<img src={mediumCoverImage} alt={title} className={styles.image}/>
-			
-			<h1><Link to={`/movie/${id}`} className={styles.Link}>{title}</Link></h1>
-			{hide ? <p onMouseOver={onSummary} className={styles.summary}>줄거리 보기</p> : <p onMouseOut={offSummary} className={styles.summary}>{summary}</p>}
-			<ul>
-				{genres.map((genre,index)=>(<li key={index} className={styles.genre}>[{genre}]</li>))}
-			</ul>
+		<div className={styles.box} onMouseOver={onBox} onMouseOut={outBox} style={{"display": "block"}}>
+			<Link to={`/movie/${id}`}><img src={mediumCoverImage} alt={title} className={styles.image}/></Link>
+			{smallImg ? <img src={mediumCoverImage} alt={title} className={styles.image}/> : <img src={mediumCoverImage} alt={title} className={styles.imageBig}/>}
+			<Link to={`/movie/${id}`} className={styles.Link}>{title}</Link>
+			{hide ? <p onMouseOver={onGenres} className={styles.genre}>장르</p> : <div>{genres.map((genre,index)=>(<span key={index} onMouseOut={offGenres} className={styles.genre}>[{genre}]</span>))}</div>}
+			<p className={styles.summary}>{summary}</p>	
 		</div>
 		
 	)

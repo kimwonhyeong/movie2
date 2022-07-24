@@ -15,12 +15,10 @@ function Detail(){
 		).json();
 		setMovie(json.data.movie);
 		setLoading(false);
-		
 	};
 	useEffect(()=>{
 		getMovie();
 	},[]);
-	console.log(movie);
 	return(<div>
 			{loading ? <p>Loading...</p> : 
 			<div className={styles.wrap}>

@@ -7,16 +7,16 @@ function Home() {
 	const getMovies = async () => {
 		const json = await (
 			await fetch(
-				`https://yts.mx/api/v2/list_movies.json?minimum_rating=9.0&sort_by=year`
+				`https://yts.mx/api/v2/list_movies.json`
 			)
 		).json();
 		setMovies(json.data.movies);
 		setLoading(false);
 	};
+	console.log(movies)
 	useEffect(()=>{
 		getMovies();
 	},[]);
-	console.log(movies);
 	return(
 		<div className={Allstyles.all}>
 			{loading ? <h1>Loading...</h1>

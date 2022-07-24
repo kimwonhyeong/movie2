@@ -5,7 +5,6 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import styles from "../css/Detail.module.css";
-import {Link} from "react-router-dom";
 function Detail(){
 	const [movie, setMovie] = useState([]);
 	const {id} = useParams();
@@ -16,24 +15,25 @@ function Detail(){
 		).json();
 		setMovie(json.data.movie);
 		setLoading(false);
+		
 	};
-	console.log(movie);
 	useEffect(()=>{
 		getMovie();
 	},[]);
+	console.log(movie);
 	return(<div>
 			{loading ? <p>Loading...</p> : 
-				<div className={styles.box}>
-					<img src={movie.large_cover_image} alt={movie.title} className={styles.image}/>
-					<div className={styles.box3}>
-						<span><a href={`${movie.url}`} className={styles.Link}>{`영화 보기`}</a></span><br/>
-					</div>
-					<div className={styles.box3}>
-						<span><Link to={`/`} className={styles.Link}>{`이전 화면`}</Link></span>
-					</div>
-				</div>
+			<div className={styles.wrap}>
+				 <div className={styles.inner}>
+					 <img src={movie.large_cover_image} alt={movie.title} className={styles.image}/>
+					 <h1 className={styles.summary}>{movie.title}</h1><br/>
+					 <span className={styles.summary}>평점: {movie.rating}</span><br/>
+					 <span className={styles.summary}>상영년도: {movie.year}</span><br/>
+				 </div>
+			</div>
 			}
 		</div>
 	)
 }
+
 export default Detail;

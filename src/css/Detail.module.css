@@ -11,47 +11,34 @@ ul,ol{
 	display:block;
 	clear:both;
 }
-.box{
-	margin:15px auto 0px auto;
-	border: 1px solid;
-	border-color:white;
-	box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
-	background-color:black;
+.wrap{
+	background-image:url("https://yts.mx/assets/images/movies/bleeding_audio_2020/background.jpg");
+	object-fit: none;
+	height:100vh;
+	width:100%;
+	position:relative;
 }
-.box3{
-	float:left;
-	border: 1px solid;
-	border-color:white;
-	box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
-	background-color: tomato;
-	width:200px;
-	height:100px;
-	margin-top: 300px;
-	margin-left:500px;
+.inner{
 	text-align:center;
-	font-size:35px;
-}
-.image{
-	float:left;
-	border-radius:18%;
-	box-shadow: 5px 15px 30px rgba(173,216,230,0.8);
-	margin-top: 5px;
-}
-.genre{
-	display: inline-block;
-	margin-right:15px;
-	font-weight: border;
-	font-size: 20px;
-	padding-left: 8px;
-	
-}
-.summary{
-	margin-top:5px;
-	font-size: 15px;
-	padding-left: 8px;
-	
+	width:800px;
+	height:500px;
+	background-color:black;
+	opacity:0.9;
+	position: absolute;
+	top:20%;
+	left:30%;
 }
 
+.image{
+	opacity:1.0;
+	float:left;
+	box-shadow: 5px 15px 30px rgba(173,216,230,0.8);
+	height:100%;
+	width:50%;
+}
+.summary{
+	color: white;
+}
 .Link{
 	font-family: fantasy;
 	text-decoration:none;
